@@ -2,6 +2,8 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   compatibilityDate: "2025-07-15",
   modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/i18n"],
+  ssr: false,
+  build: { transpile: ["naive-ui", "vueuc", "@css-render/vue3-ssr"] },
   css: ["~/assets/main.css"],
   i18n: {
     locales: [{ code: "zh", language: "zh-CN", name: "中文", file: "zh.json" }],
